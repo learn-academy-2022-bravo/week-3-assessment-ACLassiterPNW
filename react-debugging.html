@@ -62,15 +62,17 @@
           }
           // No need to change anything ABOVE this line ^
 
+          //Solutions: 
+          // 1. Moved <div style={handStyles}> above header 
+          // 2. Added this. to first button 
+          // 3. Added this. to second button 
           return(
+            <div style={handStyles}>
             <h1>Draw a Card</h1>
-            <button onClick={}>
-              Click to Draw a Card
-            </button>
-            <button onClick={shuffle}>
+            <button onClick={this.drawCard}>Click to Draw a Card</button>
+            <button onClick={this.shuffle}>
               Return Cards and Shuffle Deck
             </button>
-            <div style={handStyles}>
               {this.state.hand.map((card, index) => {
                 return (
                   <div style={cardStyles} key={index}>
